@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://ca6uj0weqt5p2"]
+
+[ext_resource type="PackedScene" uid="uid://cqa68u43xjod8" path="res://scenes/player/player.tscn" id="1_mann3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqkqs"]
+size = Vector2(800, 40)
+
+[node name="TestLevel" type="Node2D"]
+
+[node name="Sol" type="StaticBody2D" parent="."]
+position = Vector2(0, 300)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sol"]
+position = Vector2(0, 300)
+scale = Vector2(1, 0.952742)
+shape = SubResource("RectangleShape2D_lqkqs")
+
+[node name="ColorRect" type="ColorRect" parent="Sol"]
+offset_left = -400.0
+offset_top = 250.0
+offset_right = 400.0
+offset_bottom = 290.0
+
+[node name="Player" parent="." instance=ExtResource("1_mann3")]
+position = Vector2(0, 100)
+scale = Vector2(-1.69542, 1.98114)
